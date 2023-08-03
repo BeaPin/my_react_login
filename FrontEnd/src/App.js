@@ -5,8 +5,8 @@ import Dashboard from './components/Dashboard';
 import Login from './components/Login';
 import UseToken from './components/useToken';
 
-function setToken(useToken) {
-  sessionStorage.setItem('token', JSON.stringify(UseToken));
+function setToken(userToken) {
+  sessionStorage.setItem('token', JSON.stringify(userToken));
 }
 
 function getToken() {
