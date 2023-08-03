@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors')
 const app = express();
 
-/*const LoginProfiles = [
+/*const loginUser = [
   
     {
         id: 1,
@@ -38,7 +38,7 @@ const app = express();
   
   app.post('/login', (req, res) => {
     const { username, password } = req.body;
-    const profile = LoginProfiles.find(profile => profile.username === username && profile.password === password);
+    const profile = loginUser.find(profile => profile.username === username && profile.password === password);
     if (profile) {
       const token = jwt.sign({ username }, 'secret_key');
       res.json({ token });
@@ -56,4 +56,4 @@ app.use('/login', (req, res) => {
   });
 });
 
-app.listen(8000, () => console.log('API is running on http://localhost:8000/login'));
+app.listen(8000, () => console.log('API is running on port :8000'));
